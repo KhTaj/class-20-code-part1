@@ -44,6 +44,7 @@
                     <td>
                         <!-- <a href="#">Edit</a>| -->
                         <a href="show.php?id=<?=$student['id']?>">Show</a>|
+                        <a href="edit.php?id=<?=$student['id']?>">Edit</a>|
                         <a href="delete.php?id=<?=$student['id']?>" onclick="return confirm('Are you sure that you want to delete?')">Delete</a>
                     </td>
                 </tr>
