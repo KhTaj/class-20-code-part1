@@ -14,14 +14,6 @@
 ?>
 
 
-    <!-- <div style="width: 500px; margin: 0 auto">
-
-    <form action="./store.php"  method="post">
-     <input name="id" type="text" placeholder="Enter your ID"></br>
-     <input name="name" type="text" placeholder="Enter your name"></br>
-     <button>Add</button>
-    </form> -->
-
     <?php 
 
         if(isset($_SESSION['message'])){
@@ -52,7 +44,7 @@
                     <td>
                         <!-- <a href="#">Edit</a>| -->
                         <a href="show.php?id=<?=$student['id']?>">Show</a>|
-                        <a href="delete.php?id=<?=$student['id']?>">Delete</a>
+                        <a href="delete.php?id=<?=$student['id']?>" onclick="return confirm('Are you sure that you want to delete?')">Delete</a>
                     </td>
                 </tr>
 
