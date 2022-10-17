@@ -37,8 +37,8 @@ class Student{
     }
 
     public function destroy($id){
-      $index = $this->findIndex($id);
-      unset( $_SESSION['students'][$index]);
+      
+      unset( $_SESSION['students'][$this->findIndex($id)]);
         $_SESSION['message'] = 'Successfully Deleted';
     }
 
