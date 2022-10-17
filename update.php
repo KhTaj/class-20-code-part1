@@ -13,6 +13,6 @@ $student = new Student();
 echo"<pre>";
     print_r($_POST);   
 $student->update($_POST, $_GET['id']);
-// header('Location:./index.php');
+header('Location:./index.php');
 
 ?>

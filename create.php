@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
-<div style="width: 500px; margin: 0 auto">
+   
 
+<div style="width: 500px; margin: 0 auto">
+<a href="./index.php">List</a> <br></br>
 <form action="./store.php"  method="post">
  <input name="id" type="text" placeholder="Enter your ID"></br>
  <input name="name" type="text" placeholder="Enter your name"></br>
