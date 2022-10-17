@@ -24,15 +24,7 @@ class Student{
 
     public function update($data, $id)
     {
-        $students = $_SESSION['students'];
-        // $studentInfo = null;
-        foreach ($students as $key => $student){
-             if($student['id'] == $id) {
-            $_SESSION['students'][$key] = $data;
-            }
-        }
-    
-
+        $_SESSION['students'][$this->findINdex($id)] = $data;
     }
 
     public function destroy($id){
