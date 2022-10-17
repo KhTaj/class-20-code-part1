@@ -17,18 +17,9 @@ class Student{
         }
 
         public function details($id)
-        {
-            // echo '<pre>';
-            // print_r($_SESSION['students']);
-            
-        $students = $_SESSION['students'];
-        $studentInfo = null;
-        foreach ($students as $key => $student){
-        if($student['id'] == $id) {
-        $studentInfo = $_SESSION['students'][$key];
-    }
-}
-    return $studentInfo;
+        {           
+        $index = $this->findIndex($id);
+        return $_SESSION['students'][$index];
 
     }
 
@@ -45,20 +36,22 @@ class Student{
 
     }
 
-
-    
-
     public function destroy($id){
-        $students = $_SESSION['students'];
-        foreach ($students as $key => $student) {
-            if($student['id'] == $id){
-                unset($_SESSION['students'][$key]);
-            }
-        }
+      $index = $this->findIndex($id);
+      unset( $_SESSION['students'][$index]);
         $_SESSION['message'] = 'Successfully Deleted';
     }
 
-
+    public function findIndex($id){
+        $students = $_SESSION['students'];
+        $index = null;
+        foreach ($students as $key => $student){
+        if($student['id'] == $id) {
+        $index = $key;
+    }
+}
+    return $index;
+    }
 
     
 }
