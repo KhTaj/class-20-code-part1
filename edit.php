@@ -20,8 +20,8 @@ print_r($studentInfo);
 <div style="width: 500px; margin: 0 auto">
 
 <form action="./store.php"  method="post">
- <input name="id" type="text" placeholder="Enter your ID"></br>
- <input name="name" type="text" placeholder="Enter your name"></br>
+ <input name="id" value="<?= $studentInfo['id']?>" type="text" placeholder="Enter your ID"></br>
+ <input name="name" value="<?= $studentInfo['name']?>" type="text" placeholder="Enter your name"></br>
  <button>Add</button>
 </form>
     
