@@ -32,6 +32,10 @@ class Student{
 
     }
 
+    public function update($data, $id){
+        
+    }
+
     public function destroy($id){
         $students = $_SESSION['students'];
         foreach ($students as $key => $student) {
