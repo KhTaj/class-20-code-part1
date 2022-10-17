@@ -10,30 +10,32 @@ class Student{
         session_start();
     }
 
-    public function store($data){
+    public function store(array $data){
         // session_start();      
         $_SESSION['students'][] = $data;
         $_SESSION['message'] = 'Successfully Created';
         }
 
-        public function details($id)
+        public function details(int $id)
         {     
              return $_SESSION['students'][$this->findIndex($id)];
 
     }
 
-    public function update($data, $id)
+    public function update(array $data, int $id)
     {
         $_SESSION['students'][$this->findINdex($id)] = $data;
+        $_SESSION['message'] = 'Successfully Updated';
     }
 
-    public function destroy($id){
+    public function destroy(int $id){
       
       unset( $_SESSION['students'][$this->findIndex($id)]);
         $_SESSION['message'] = 'Successfully Deleted';
     }
 
-    public function findIndex($id){
+    public function findIndex(int $id)
+    {
         $students = $_SESSION['students'];
         $index = null;
         foreach ($students as $key => $student){
