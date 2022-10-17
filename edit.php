@@ -19,10 +19,10 @@ print_r($studentInfo);
     
 <div style="width: 500px; margin: 0 auto">
 
-<form action="./store.php"  method="post">
+<form action="./update.php"  method="post">
  <input name="id" value="<?= $studentInfo['id']?>" type="text" placeholder="Enter your ID"></br>
  <input name="name" value="<?= $studentInfo['name']?>" type="text" placeholder="Enter your name"></br>
- <button>Add</button>
+ <button>Update</button>
 </form>
     
 
