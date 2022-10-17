@@ -17,9 +17,8 @@ class Student{
         }
 
         public function details($id)
-        {           
-        $index = $this->findIndex($id);
-        return $_SESSION['students'][$index];
+        {     
+             return $_SESSION['students'][$this->findIndex($id)];
 
     }
 
